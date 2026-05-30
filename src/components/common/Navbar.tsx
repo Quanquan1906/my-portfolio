@@ -11,7 +11,7 @@ const navLinks = [
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+      <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         {/* Logo */}
         <Link
           href="/"
@@ -26,7 +26,7 @@ export default function Navbar() {
             <Link
               key={href}
               href={href}
-              className="font-mono text-sm tracking-wide text-muted-foreground transition-colors hover:text-foreground"
+              className="font-mono text-2xl tracking-wide text-muted-foreground transition-colors hover:text-foreground"
             >
               {label}
             </Link>
@@ -34,7 +34,7 @@ export default function Navbar() {
         </div>
 
         {/* CTA */}
-        <Button asChild variant="outline" size="sm">
+        <Button asChild variant="outline" size="xl" className="hidden md:inline-flex">
           <Link href="#contact">Contact Me</Link>
         </Button>
       </nav>
