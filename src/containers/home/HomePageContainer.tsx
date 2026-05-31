@@ -1,4 +1,5 @@
 import HeroSection from "@/components/home/HeroSection";
+import ThankYouMarquee from "@/components/home/ThankYouMarquee";
 import AboutSection from "@/components/home/AboutSection";
 import ResearchSection from "@/components/home/ResearchSection";
 import ProjectsSection from "@/components/home/ProjectsSection";
@@ -9,6 +10,7 @@ export default function HomePageContainer() {
   return (
     <>
       <HeroSection />
+      <ThankYouMarquee />
       <AboutSection />
       <ResearchSection />
       <ProjectsSection />

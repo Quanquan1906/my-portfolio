@@ -65,3 +65,33 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
 }
+
+@keyframes avatar-bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-42px); }
+  100% { transform: translateY(0); }
+}
+
+.avatar-bounce {
+  animation: avatar-bounce 2.2s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 25s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
 import SiteShell from "@/components/common/SiteShell";
+import MotionProvider from "@/components/common/MotionProvider";
 
 export const metadata: Metadata = {
   title: "Minh Quân Đỗ | Researcher & Frontend Engineer",
@@ -17,7 +18,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body>
-        <SiteShell>{children}</SiteShell>
+        <MotionProvider>
+          <SiteShell>{children}</SiteShell>
+        </MotionProvider>
       </body>
     </html>
   );
