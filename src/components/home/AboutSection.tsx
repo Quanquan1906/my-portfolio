@@ -1,4 +1,4 @@
-import { Brain, Activity, Code2, Layers } from "lucide-react";
+import { Brain, Activity, Code2, Layers, Workflow, Cpu } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 interface ExpertiseCard {
@@ -10,30 +10,29 @@ interface ExpertiseCard {
 const expertise: ExpertiseCard[] = [
   {
     icon: Brain,
-    title: "Interpretable AI",
+    title: "AI Research",
     description:
-      "Designing transparent ML systems that explain their reasoning through fuzzy logic and Bayesian inference.",
+      "Exploring AI methods and research ideas that can solve meaningful problems and support better decision-making.",
   },
   {
-    icon: Activity,
-    title: "Signal Processing",
+    icon: Cpu,
+    title: "AI Application Development",
     description:
-      "Extracting cognitive patterns from physiological signals for AI-based classification systems.",
+      "Turning research concepts into practical workflows, prototypes, and web-based applications.",
   },
   {
     icon: Code2,
     title: "Frontend Engineering",
     description:
-      "Building clean, responsive interfaces with Next.js, React, TypeScript, and Tailwind CSS.",
+      "Building clean, responsive, and user-friendly interfaces with modern frontend technologies.",
   },
   {
     icon: Layers,
-    title: "Full-Stack Systems",
+    title: "Full-Stack Integration",
     description:
-      "Connecting AI workflows with backend APIs, databases, and web-based applications.",
+      "Connecting frontend interfaces, backend APIs, databases, and AI workflows into complete systems.",
   },
 ];
-
 export default function AboutSection() {
   return (
     <section id="about" className="py-24">
@@ -52,37 +51,18 @@ export default function AboutSection() {
           <div className="md:col-span-2">
             <p className="text-base leading-8 text-muted-foreground">
               I combine{" "}
-              <span className="font-semibold text-foreground">
-                AI research
-              </span>{" "}
+              <span className="font-semibold text-foreground">AI research</span>{" "}
               with{" "}
               <span className="font-semibold text-foreground">
                 practical engineering
               </span>{" "}
-              to turn complex ideas into usable web-based systems. My work
-              focuses on{" "}
-              <span className="text-blue-300 font-medium">
-                Interpretable Machine Learning
-              </span>
-              ,{" "}
-              <span className="text-blue-300 font-medium">
-                Physiological Signal Analysis
-              </span>
-              ,{" "}
-              <span className="text-blue-300 font-medium">Fuzzy Systems</span>
-              , and{" "}
-              <span className="text-blue-300 font-medium">
-                Bayesian Reasoning
-              </span>{" "}
-              — while applying{" "}
-              <span className="font-semibold text-foreground">
-                Frontend Engineering
-              </span>{" "}
-              and{" "}
-              <span className="font-semibold text-foreground">
-                Backend-integrated Applications
-              </span>{" "}
-              to make those systems accessible in real products.
+              to build web-based systems that are useful, understandable, and easy to
+              interact with. My work connects{" "}
+              <span className="font-medium text-blue-300">research ideas</span>,{" "}
+              <span className="font-medium text-blue-300">AI-driven solutions</span>, and{" "}
+              <span className="font-medium text-blue-300">modern web development</span>{" "}
+              through frontend interfaces, backend integration, and product-oriented
+              implementation.
             </p>
           </div>
         </div>

@@ -34,7 +34,7 @@ export default function Navbar() {
         </div>
 
         {/* CTA */}
-        <Button asChild variant="outline" size="xl" className="hidden md:inline-flex">
+        <Button asChild variant="outline" size="sm" className="hidden md:inline-flex">
           <Link href="#contact">Contact Me</Link>
         </Button>
       </nav>
