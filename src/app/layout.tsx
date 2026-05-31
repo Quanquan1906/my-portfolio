@@ -5,9 +5,9 @@ import SiteShell from "@/components/common/SiteShell";
 import MotionProvider from "@/components/common/MotionProvider";
 
 export const metadata: Metadata = {
-  title: "Minh Quân Đỗ | Researcher & Frontend Engineer",
+  title: "Minh Quan Do | Portfolio",
   description:
-    "Personal portfolio of Minh Quân Đỗ, a researcher and frontend engineer working on interpretable AI systems and modern web applications.",
+    "Personal portfolio of Minh Quan Do, a researcher and frontend engineer working on interpretable AI systems and modern web applications.",
 };
 
 interface RootLayoutProps {
