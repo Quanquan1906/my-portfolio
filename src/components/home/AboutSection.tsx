@@ -1,5 +1,8 @@
+"use client";
+
 import { Brain, Activity, Code2, Layers, Workflow, Cpu } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import Reveal from "@/components/common/Reveal";
 
 interface ExpertiseCard {
   icon: LucideIcon;
@@ -38,6 +41,7 @@ export default function AboutSection() {
     <section id="about" className="py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* ── Top row: label + description ─────────────────────────── */}
+        <Reveal>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           {/* Left 1/3: eyebrow + divider */}
           <div>
@@ -66,12 +70,13 @@ export default function AboutSection() {
             </p>
           </div>
         </div>
+        </Reveal>
 
         {/* ── Bottom: 4 expertise cards ────────────────────────────── */}
         <div className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {expertise.map(({ icon: Icon, title, description }) => (
+          {expertise.map(({ icon: Icon, title, description }, index) => (
+            <Reveal key={title} delay={index * 0.08}>
             <div
-              key={title}
               className="group relative rounded-2xl border border-border-subtle bg-surface/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:bg-blue-500/5 hover:shadow-[0_0_40px_rgba(37,99,235,0.15)]"
             >
               {/* Subtle inner glow on hover */}
@@ -92,6 +97,7 @@ export default function AboutSection() {
                 {description}
               </p>
             </div>
+            </Reveal>
           ))}
         </div>
       </div>

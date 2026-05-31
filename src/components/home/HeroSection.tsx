@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
+import Reveal from "@/components/common/Reveal";
 
 export default function HeroSection() {
   return (
@@ -10,7 +13,7 @@ export default function HeroSection() {
       className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-16 px-6 py-24 lg:flex-row lg:py-28"
     >
       {/* Left content */}
-      <div className="flex flex-1 flex-col gap-10">
+      <Reveal delay={0.05} className="flex flex-1 flex-col gap-10">
         {/* Eyebrow label */}
         <div className="flex items-center gap-4">
           <span className="text-[17px] font-semibold uppercase tracking-[2px] text-muted-foreground">
@@ -45,10 +48,10 @@ export default function HeroSection() {
             <Link href="#projects">View Projects</Link>
           </Button>
         </div>
-      </div>
+      </Reveal>
 
       {/* Right avatar */}
-      <div className="relative hidden shrink-0 lg:flex">
+      <Reveal delay={0.2} y={16} className="relative hidden shrink-0 lg:flex">
         {/* Outer rings */}
         <div className="absolute -inset-16 rounded-full border border-blue-500/10" />
         <div className="absolute -inset-7 rounded-full border border-blue-400/20" />
@@ -68,7 +71,7 @@ export default function HeroSection() {
             />
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

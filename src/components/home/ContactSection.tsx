@@ -1,11 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Reveal from "@/components/common/Reveal";
 
 export default function ContactSection() {
   return (
     <section id="contact" className="py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-lg border border-border-subtle bg-surface px-8 py-16 md:px-16">
+          <Reveal>
           <div className="mx-auto flex max-w-xl flex-col items-center gap-8 text-center">
             {/* Eyebrow */}
             <p className="text-[10px] font-semibold uppercase tracking-[2px] text-border">
@@ -36,6 +40,7 @@ export default function ContactSection() {
               </Link>
             </Button>
           </div>
+          </Reveal>
         </div>
       </div>
     </section>

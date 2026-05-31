@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const socialLinks = [
-  { label: "GITHUB",   href: "https://github.com/minhdoqua" },
+  { label: "GITHUB",   href: "https://github.com/Quanquan1906" },
   { label: "LINKEDIN", href: "https://linkedin.com/in/minhdoqua" },
   { label: "EMAIL",    href: "mailto:doquan19062004@gmail.com" },
 ];

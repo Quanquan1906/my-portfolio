@@ -1,3 +1,7 @@
+"use client";
+
+import Reveal from "@/components/common/Reveal";
+
 const skillGroups = [
   {
     category: "RESEARCH & AI",
@@ -26,9 +30,9 @@ const skillGroups = [
     skills: [
       "Next.js API Routes",
       "REST API",
-      "Prisma",
+      "MongoDB",
       "PostgreSQL",
-      "Supabase",
+      "MySQL",
       "Python / PyTorch",
     ],
   },
@@ -40,17 +44,20 @@ export default function SkillsSection() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
           {/* ── Left 1/4: label ──────────────────────────────────── */}
+          <Reveal>
           <div>
-            <span className="text-[10px] font-semibold uppercase tracking-[2px] text-border">
+            <span className="text-[17px] font-semibold uppercase tracking-[2px] text-border">
               TECHNICAL STACK
             </span>
             <div className="mt-8 h-px w-full bg-border" />
           </div>
+          </Reveal>
 
           {/* ── Right 3/4: 3-col skill groups ──────────────────────── */}
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 md:col-span-3">
-            {skillGroups.map(({ category, skills }) => (
-              <div key={category}>
+            {skillGroups.map(({ category, skills }, index) => (
+              <Reveal key={category} delay={index * 0.08}>
+              <div>
                 <p className="mb-5 text-xs font-bold uppercase tracking-[1.2px] text-muted-foreground">
                   {category}
                 </p>
@@ -66,6 +73,7 @@ export default function SkillsSection() {
                   ))}
                 </ul>
               </div>
+              </Reveal>
             ))}
           </div>
         </div>
